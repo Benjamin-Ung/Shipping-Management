@@ -1,10 +1,13 @@
 package com.example.demo.container;
-
+import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.ui.Model;
+
 import java.util.List;
 
+@Controller
 @RestController
 @RequestMapping(path = "api/v1/container")
 public class ContainerController {
@@ -17,6 +20,13 @@ public class ContainerController {
     @GetMapping
     public List<Container> getContainers(){
         return containerService.getContainers();
+    }
+
+    @GetMapping (path = "/addContainer")
+    public String sendForm(Model model) {
+        Container container = new Container();
+        model.addAttribute("container", container);
+        return "index";
     }
 
     @PostMapping
