@@ -1,29 +1,27 @@
-package com.example.demo.student;
+package com.example.demo.container;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 @Configuration
-public class StudentConfig {
+public class ContainerConfig {
     //bean!
     @Bean
-    CommandLineRunner commandLineRunner(StudentRepository repository) {
+    CommandLineRunner commandLineRunner(ContainerRepository repository) {
         return args -> {
-             Student mariam = new Student(
+             Container mariam = new Container(
                     "Mariam",
                     "mariam.jamal@gmail.com",
-                    LocalDate.of(2000, Month.JANUARY, 5)
+                    "LA"
             );
 
-            Student alex = new Student(
+            Container alex = new Container(
                     "Alex",
                     "alex@gmail.com",
-                    LocalDate.of(2001, Month.JANUARY, 24)
+                    "San Francisco"
             );
 
             repository.saveAll(
