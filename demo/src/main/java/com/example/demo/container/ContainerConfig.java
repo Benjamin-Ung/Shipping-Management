@@ -15,13 +15,15 @@ public class ContainerConfig {
              Container mariam = new Container(
                     "Mariam",
                     "mariam.jamal@gmail.com",
-                    "LA"
+                    "LA",
+                     "San Francisco"
             );
 
             Container alex = new Container(
                     "Alex",
                     "alex@gmail.com",
-                    "San Francisco"
+                    "San Francisco",
+                    "LA"
             );
 
             repository.saveAll(

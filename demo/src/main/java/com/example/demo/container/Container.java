@@ -18,15 +18,33 @@ public class Container{
     private Long id;
     private String vendor;
     private String email;
+    private String currentLocation;
     private String destination;
 
     public Container() {
     }
 
-    public Container(String vendor, String email, String destination) {
+    public Container(Long id, String vendor, String email, String currentLocation, String destination) {
+        this.id = id;
         this.vendor = vendor;
         this.email = email;
+        this.currentLocation = currentLocation;
         this.destination = destination;
+    }
+
+    public Container(String vendor, String email, String currentLocation, String destination) {
+        this.vendor = vendor;
+        this.email = email;
+        this.currentLocation = currentLocation;
+        this.destination = destination;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getVendor() {
@@ -45,12 +63,24 @@ public class Container{
         this.email = email;
     }
 
+    public String getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(String currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
     public String getDestination() {
         return destination;
     }
 
     public void setDestination(String destination) {
         this.destination = destination;
+    }
+
+    public boolean getStatus() {
+        return currentLocation.equals(destination);
     }
 
     @Override
@@ -60,6 +90,7 @@ public class Container{
                 ", vendor='" + vendor + '\'' +
                 ", email='" + email + '\'' +
                 ", destination='" + destination + '\'' +
+                ", status ='" + getStatus() +
                 '}';
     }
 }

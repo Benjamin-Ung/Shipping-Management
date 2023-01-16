@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface ContainerRepository extends JpaRepository<Container, Long> {
 
     //Select * from student where email = email
-    @Query("SELECT s FROM Container s WHERE s.email = ?1")
-    Optional<Container> findContainerByEmail(String email);
+    //@Query("SELECT s FROM Container s WHERE s.email = ?1")
+    //Optional<Container> findContainerByEmail(String email);
 }
