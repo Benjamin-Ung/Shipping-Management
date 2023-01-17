@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 
 import java.util.List;
 
-@Controller
 @RestController
 @RequestMapping(path = "api/v1/container")
 public class ContainerController {
@@ -22,12 +21,7 @@ public class ContainerController {
         return containerService.getContainers();
     }
 
-    @GetMapping (path = "/addContainer")
-    public String sendForm(Model model) {
-        Container container = new Container();
-        model.addAttribute("container", container);
-        return "index";
-    }
+
 
     @PostMapping
     public void registerNewContainer(@RequestBody Container container){
