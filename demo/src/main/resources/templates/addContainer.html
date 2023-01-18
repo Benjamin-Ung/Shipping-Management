@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Add User</h1>
+    <h1>Add Container</h1>
         <form action="#" th:action="@{/addContainer}" th:object="${container}" method="post">
             <p>Vendor name: <input type="text" th:field="*{vendor}"></p>
             <p>email: <input type="text" th:field="*{email}"></p>
@@ -13,6 +13,7 @@
             <p>Destination: <input type="text" th:field="*{destination}"></p>
 
             <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
+            <a href="/">Go Back Home</a>
         </form>
 </body>
 </html>

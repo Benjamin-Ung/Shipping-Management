@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,8 +8,19 @@
 <div>
     <h1>This is the Home page</h1>
     <p>Here are the list of Containers to be shipped</p>
-    <a href="addContainer.html">Add Container</a>
-    <a href="DeleteContainer.html">Delete Container</a>
+    <div class="col-sm-12">
+        <table class="table table-hover">
+<!--            th:each="list: ${list}"-->
+            <tr>
+                <td th:text="${list}"></td>
+                <!-- <td><a href="#" th:text="${message.name}">Title ...</a></td>-->
+            </tr>
+        </table>
+    </div>
+
+
+    <a href="addContainer">Add Container</a>
+    <a href="deleteContainer">Delete Container</a>
 </div>
 
 </body>

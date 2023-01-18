@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+    <h1>Delete  Container</h1>
+    <form action="#" th:action="@{/deleteContainer}" th:object="${id}" method="post">
+        <p>Enter the id of the container <input type="number" th:field=""></p>
+        <p>Enter the name of the vendor</p>
 
+        <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
+    </form>
+    <a href="/">Go Back</a>
 </body>
 </html>
