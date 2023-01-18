@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <h1>Add User</h1>
-        <form action="#" th:action="@{/addContainer}" th:object="${container}" method="post">
-            <p>Vendor name: <input type="text" th:field="*{vendor}"></p>
-            <p>email: <input type="text" th:field="*{email}"></p>
-            <p>Current location: <input type="text" th:field="*{currentLocation}"></p>
-            <p>Destination: <input type="text" th:field="*{destination}"></p>
+<div>
+    <h1>This is the Home page</h1>
+    <p>Here are the list of Containers to be shipped</p>
+    <a href="addContainer.html">Add Container</a>
+    <a href="DeleteContainer.html">Delete Container</a>
+</div>
 
-            <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"></p>
-        </form>
 </body>
 </html>

@@ -1,16 +1,16 @@
 package com.example.demo.container;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.ui.Model;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/container")
+@RequestMapping(path = "api/")
 public class ContainerController {
     private final ContainerService containerService;
+
     @Autowired
     public ContainerController(ContainerService containerService){
         this.containerService = containerService;
@@ -20,8 +20,6 @@ public class ContainerController {
     public List<Container> getContainers(){
         return containerService.getContainers();
     }
-
-
 
     @PostMapping
     public void registerNewContainer(@RequestBody Container container){
